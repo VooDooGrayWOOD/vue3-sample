@@ -2,13 +2,14 @@
   <form @submit.prevent>
     <h4>Создание поста</h4>
     <my-input
+        v-focus
         v-model="post.title"
         type="text"
-        placeholder="Название" />
+        placeholder="Название"/>
     <my-input
         v-model="post.body"
         type="text"
-        placeholder="Описание" />
+        placeholder="Описание"/>
     <my-button
         style="align-self: flex-end; margin-top: 15px;"
         @click="createPost"
@@ -20,6 +21,7 @@
 
 <script>
 import MyInput from "@/components/UI/MyInput";
+
 export default {
   components: {MyInput},
   data() {
