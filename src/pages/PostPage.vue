@@ -29,19 +29,6 @@
     />
     <div v-else>Идет загрузка...</div>
     <div v-intersection="loadMorePosts" class="observer"></div>
-    <!--    <div class="page_wrapper">-->
-    <!--      <div-->
-    <!--          v-for="pageNumber in totalPages"-->
-    <!--          :key="pageNumber"-->
-    <!--          class="page"-->
-    <!--          :class="{-->
-    <!--            'current-page': page === pageNumber-->
-    <!--          }"-->
-    <!--          @click="changePage(pageNumber)"-->
-    <!--      >-->
-    <!--        {{ pageNumber }}-->
-    <!--      </div>-->
-    <!--    </div>-->
   </div>
 </template>
 
@@ -84,9 +71,6 @@ export default {
     showDialog() {
       this.dialogVisible = true
     },
-    // changePage(pageNumber) {
-    //   this.page = pageNumber
-    // },
     async fetchPosts() {
       try {
         this.isPostsLoading = true
@@ -122,18 +106,6 @@ export default {
   },
   mounted() {
     this.fetchPosts()
-    // let options = {
-    //   rootMargin: '0px',
-    //   threshold: 1.0
-    // }
-    // const callback = (entries, observer) => {
-    //   if (entries[0].isIntersecting && this.page < this.totalPages) {
-    //     this.loadMorePosts()
-    //   }
-    // }
-    //
-    // let observer = new IntersectionObserver(callback, options)
-    // observer.observe(this.$refs.observer)
   },
   computed: {
     sortedPosts() {
@@ -144,9 +116,7 @@ export default {
     }
   },
   watch: {
-    // page() {
-    //   this.fetchPosts()
-    // }
+    
   }
 }
 </script>
