@@ -1,7 +1,5 @@
 <template>
   <div>
-    <!--    <h1>{{ likes }}</h1>-->
-    <!--    <button @click="addLike">addLikes</button>-->
     <h1>Страница с постами</h1>
     <my-input
         v-focus
