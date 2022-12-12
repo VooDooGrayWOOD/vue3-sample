@@ -105,9 +105,6 @@ export default {
     })
   },
   watch: {
-    // page() {
-    //   this.fetchPosts()
-    // }
   }
 }
 </script>
